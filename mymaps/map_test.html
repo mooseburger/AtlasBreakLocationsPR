@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="./js/lib/d3.js"></script>
+<script src="./js/lib/klass.js"></script>
+<script src="./js/atlaspr.js"></script>
+<body>
+  <div id = 'custom-map'></div>
+  <script type = 'text/javascript'>
+    
+ var nodeCustomMark = document.getElementById("custom-map");
+ function after_loading_custom(atlas){     
+    debugger;
+    atlas.add_markers([{center: [-68.106904, 18.490029], text: "San Juan"}]); 
+ };
+ var custConfig = {
+   node: nodeCustomMark, 
+   tiles: 'pueblos', 
+   size: "large", 
+   zoom: true, 
+   on_ready: after_loading_custom
+ }; 
+ new AtlasPR(custConfig);
+ 
+</script>
